@@ -20,6 +20,7 @@ function Form() {
 			evt.target.parentNode.children[i].disabled = true;
 		}
 	}
+
 	return (
 		<div className='container'>
 			<form className='test__form w-75 mx-auto' action='#'>
@@ -52,7 +53,7 @@ function Form() {
 					))}
 				</ul>
 				<h2 className='test__result text-center'>Result:</h2>
-				<p className='alert alert-info p-4'>
+				<div className='alert alert-info p-4'>
 					<p>
 						Your score:
 						<strong className='ml-1'>
@@ -65,7 +66,7 @@ function Form() {
 							{(score * 100) / data.length}
 						</strong>
 					</p>
-				</p>
+				</div>
 			</form>
 		</div>
 	);
