@@ -6,7 +6,7 @@ function Form() {
 
 	function answerBtnHandle(evt) {
 		if (evt.target.attributes.iscorrect.value === `true`) {
-			setScore(score + 1);
+			setScore((score) => score + 1);
 			evt.target.classList.add('bg-success', 'text-white');
 		} else {
 			evt.target.classList.add('bg-danger', 'text-white');
@@ -63,7 +63,7 @@ function Form() {
 					<p className='mb-0'>
 						Percentage:
 						<strong className='ml-1 '>
-							{(score * 100) / data.length}
+							{(score * 100) / data.length}%
 						</strong>
 					</p>
 				</div>
