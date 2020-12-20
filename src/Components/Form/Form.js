@@ -5,7 +5,7 @@ function Form() {
 	const [score, setScore] = useState(0);
 
 	function answerBtnHandle(evt) {
-		if (evt.target.attributes.iscorrect.value === `true`) {
+		if (evt.target.attributes.isright.value === `true`) {
 			setScore((score) => score + 1);
 			evt.target.classList.add('bg-success', 'text-white');
 		} else {
@@ -43,7 +43,7 @@ function Form() {
 									onClick={answerBtnHandle}
 									className='test__variant-btn btn btn-block text-left  list-group-item '
 									type='button'
-									iscorrect={String(variant.isCorrect)}
+									isright={String(variant.isCorrect)}
 									id={variant.answerTitle}
 									name='user__choice'>
 									{variant.answer}) {variant.answerTitle}
